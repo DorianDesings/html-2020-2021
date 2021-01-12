@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parrafo-1 {
+            color: red
+        }
+
+    </style>
+</head>
+
+<!-- 
+    Algunos atributos globales que están disponibles para la mayoría de etiquetas en HTML
+
+    class -> Éste atributo se usa para dar estilos a través de CSS
+
+    id -> Es un identificador único que se utiliza para seleccionar el elemento desde JS y para hacer navegación a través de anclas
+
+    title -> Es un atributo que ayuda a la accesibilidad mostrando una descripción del elemento al que pertenece. Aparece el mensaje en un tooltip
+
+    data-* -> Es un atributo que nos permite guardar algún valor en la etiqueta HTML
+
+ -->
+
+<body>
+    <p class="parrafo-1">Clases</p>
+    <p id="parrafo">Identificador a través de un ID</p>
+    <p title="Este es un ejemplo del atributo title">Título con tooltip</p>
+    <p id="parrafo-2" data-ejemplo="Datos de ejemplo">Datos pasados en la etiqueta</p>
+
+    <script>
+        const p = document.getElementById('parrafo')
+        const parrafo2 = document.getElementById('parrafo-2')
+
+        console.log(p.textContent)
+        console.log(parrafo2.dataset.ejemplo)
+
+    </script>
+</body>
+
+</html>
